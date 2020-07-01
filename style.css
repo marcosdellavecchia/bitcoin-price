@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: gray;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: #030303;
+}
+
+.currencies {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    width: 80%;
+    padding: 40px;
+    background: #090909;
+}
+
+.usd-section,
+.eur-section,
+.gbp-section {
+    padding: 20px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    position: relative;
+    background: #111111;
+}
+
+.usd-price,
+.eur-price,
+.gbp-price {
+    padding: 0px 20px;
+}
+
+small {
+    position: absolute;
+    left: 30px;  
+    bottom: 0px;
+}
+
+i {
+    padding-right: 10px;
+}
+
+.time {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.update {
+    margin: 0px 15px;
+}
+
+.credits {
+    padding: 15px 0px;
+}
+
+.credits p {
+    font-size: 14px;
+}
+
+.credits a {
+    text-decoration: none;
+    color: gainsboro;
+}
+
+
+
