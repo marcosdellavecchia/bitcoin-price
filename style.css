@@ -10,7 +10,9 @@ body {
     align-items: center;
     height: 100vh;
     font-family: 'Open Sans', sans-serif;
-    background: linear-gradient(rgba(46,46,46,1) 0%, rgba(0,0,0,1));
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: white;
 }
 
@@ -21,6 +23,14 @@ body {
     align-items: center;
     width: 100%;
     height: 100vh;
+}
+
+.header {
+    text-align: center;
+}
+
+.header p {
+    padding: 5px 0px;
 }
 
 .currencies {
@@ -46,7 +56,7 @@ body {
 .usd-price,
 .eur-price,
 .gbp-price {
-    padding: 0px 15px;
+    padding-left: 40px;
 }
 
 small {
@@ -116,5 +126,3 @@ small {
     transform: scale(1);
   }
 }
-
-

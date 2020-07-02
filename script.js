@@ -5,9 +5,6 @@ window.addEventListener("load", () => {
     const usdSpan = document.querySelector('.usd-price');
     const eurSpan = document.querySelector('.eur-price');
     const gbpSpan = document.querySelector('.gbp-price');
-    const usdSmall = document.querySelector('.usd-section small');
-    const eurSmall = document.querySelector('.eur-section small');
-    const gbpSmall = document.querySelector('.gbp-section small');
     const updateSpan = document.querySelector('.update');
     const body = document.querySelector('body');
     const btcIcon = document.querySelector('.fa-bitcoin');
@@ -25,20 +22,17 @@ window.addEventListener("load", () => {
             const eurPrice2 = eurPrice.substring(0, eurPrice.length -2);
             const gbpPrice = data.bpi.GBP.rate;
             const gbpPrice2 = gbpPrice.substring(0, gbpPrice.length -2);
-            const usdDescription = data.bpi.USD.description;
-            const eurDescription = data.bpi.EUR.description;
-            const gbpDescription = data.bpi.GBP.description;
             const updateTime = data.time.updated;
+
+  //Convert UTC time to local.
+            var updateLocal = new Date(updateTime).toLocaleString("es-AR");
             
 
   //Replace html tags with previously defined API variables 
             usdSpan.textContent = usdPrice2;
             eurSpan.textContent = eurPrice2;
             gbpSpan.textContent = gbpPrice2;
-            usdSmall.textContent = usdDescription;
-            eurSmall.textContent = eurDescription;
-            gbpSmall.textContent = gbpDescription;
-            updateSpan.textContent = updateTime;
+            updateSpan.textContent = updateLocal;          
         })
 
   //Fade In animation
@@ -62,11 +56,6 @@ window.addEventListener("load", () => {
 
   //Wait 0.8s before heartbeat animation runs
 setTimeout(function(){
-  console.log(btcIcon);
   btcIcon.classList.add("heartbeat"); 
   }, 700);
-
 })
-    
-     
-    
