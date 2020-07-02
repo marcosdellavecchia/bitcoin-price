@@ -1,2 +1,3 @@
 # bitcoinPriceToday
- Real time bitcoin quotation in USD, EUR and GBP using Coindesk API.
+Simple app that shows bitcoin prices and their last update time in different currencies using Coindesk API.
+Built using HTML, CSS and JavaScript.
